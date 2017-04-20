@@ -1,7 +1,10 @@
 VIM Plug 
 ===========================
 
-My personal neovim setup. Use vim-plug addon manager and have fun. Currently
-under heavy rework.
+* since using of *othree/yajs.vim*, so javascript indent is taken from
+    [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript/blob/master/indent/javascript.vim)
 
-Or just use [neovim](https://neovim.io/)
+
+* steps
+    * download above vim-javascript indent vim and put into
+        after/indent/javascript.vim

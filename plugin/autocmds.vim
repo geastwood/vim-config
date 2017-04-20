@@ -1,5 +1,6 @@
 autocmd! BufWritePost,BufReadPost * Neomake
 
+
 " automatically close preview window when done
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -40,7 +41,6 @@ function! SearchFlowBin()
 endfunction
 
 autocmd FileType javascript.jsx.flow call SearchFlowBin()
-autocmd FileType javascript.jsx call SearchFlowBin()
 
 function! SearchEslintBin()
   let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
@@ -53,3 +53,5 @@ function! SearchEslintBin()
 endfunction
 
 autocmd FileType javascript call SearchEslintBin()
+autocmd FileType javascript.jsx call SearchEslintBin()
+autocmd FileType javascript.jsx.flow call SearchEslintBin()
