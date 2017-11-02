@@ -6,9 +6,6 @@ inoremap <C-j> <esc>
 " clear search results
 nnoremap <leader>sc :noh<cr>
 
-" toggle fold
-nnoremap <Tab> za
-
 " misc
 nnoremap <leader>S :Startify<CR>
 nnoremap <leader>H :History<CR>
@@ -132,3 +129,6 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Prettier
+nnoremap <Leader>pt :call Prettier_Toggle()<CR>

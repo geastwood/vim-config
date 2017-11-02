@@ -52,14 +52,24 @@ Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-rooter' " change current directory to root
-Plug 'terryma/vim-multiple-cursors'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.dotfiles/vim/plugged/gocode/nvim/symlink.sh' }
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'Valloric/MatchTagAlways'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'retorillo/istanbul.vim', { 'on': ['IstanbulClear', 'IstanbulUpdate', 'IstanbulMode'] }
-" Plug 'ihacklog/HiCursorWords'
+Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
+Plug 'reasonml/vim-reason-loader'
+Plug 'leafgarland/typescript-vim'
+Plug 'eugen0329/vim-esearch'
+
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+
+" Haskell
+Plug 'itchyny/vim-haskell-indent'
+
 call plug#end()
+
 
 let mapleader = ','
 let maplocalleader = ','
@@ -75,3 +85,14 @@ let g:mta_filetypes = {
             \}
 let g:mta_use_matchparen_group = 0
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+
+let g:webdevicons_conceal_nerdtree_brackets = 0
+
+let g:racer_cmd = "/Users/feiliu/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+let g:rustfmt_command = '/Users/feiliu/.cargo/bin/rustfmt'
+let g:rustfmt_autosave = 1
+let g:rustfmt_fail_silently = 1
+
+call esearch#map('<leader>/', 'esearch')

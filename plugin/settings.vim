@@ -35,7 +35,6 @@ set visualbell                      " flash instead of beep
 set cursorline                      " highlight current line
 set ruler                           " show cursor position in status line, is replaced by airline anyway
 set backspace=indent,eol,start      " allow normal backspace usage in insert mode
-set relativenumber                  " relative line numbers
 set ignorecase                      " when searching lower case, also find upper case
 set smartcase                       " turn of lower case results when explicitly searching for upper case
 set diffopt=filler,vertical         " start diff in vertical split and show filler lines
@@ -68,6 +67,8 @@ set foldmethod=indent               " fold with indentation method
 set foldlevelstart=99               " no initial folding
 
 set updatetime=1000                 " when to execute CursorHold
+language en_US
+set langmenu=en
 set wrap                          " no wrap
 
 if has("gui_vimr")
