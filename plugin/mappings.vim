@@ -7,11 +7,11 @@ inoremap <C-j> <esc>
 nnoremap <leader>sc :noh<cr>
 
 " misc
-nnoremap <leader>S :Startify<CR>
-nnoremap <leader>H :History<CR>
-nnoremap <leader>C :Commands<CR>
-nnoremap <leader>F :Files<CR>
-nnoremap <leader>M :Maps<CR>
+" nnoremap <leader>S :Startify<CR>
+" nnoremap <leader>H :History<CR>
+" nnoremap <leader>C :Commands<CR>
+" nnoremap <leader>F :Files<CR>
+" nnoremap <leader>M :Maps<CR>
 
 
 " easy-align
@@ -46,8 +46,9 @@ nnoremap <leader>nt :NERDTreeToggle<CR>   " open a horizontal split and switch t
 nnoremap <leader>nf :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <C-f> :GitFiles<CR>
 nnoremap <C-g> :Ag 
-nnoremap <C-m> :Marks<CR>
-nnoremap <C-c> :Commands<CR>
+nnoremap <C-h> :History:<CR>
+nnoremap <leader>c :Commits<CR>
+nnoremap <leader>bc :BCommits<CR>
 
 " window
 nnoremap <leader>wv <C-w>v<C-w>l   " split vertically
@@ -55,18 +56,14 @@ nnoremap <leader>wh <C-w>s<C-w>j   " split horizontally
 
 " file, tagbar
 nnoremap <leader>ff :Files<CR>
-nnoremap <leader>ft :TagbarToggle<CR> " need setup
 
 " buffer
 nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <C-l> :Lines<CR>
 nnoremap <leader>bd :bdelete!<CR>
 nnoremap <leader>bdd :BufOnly<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
-nnoremap <leader>b/ :Lines<CR>
-nnoremap <leader>bl :BLines<CR>
 
 " toggles
 noremap <Leader>ti :set list!<CR>:echo 'Toggled special characters'<CR>" Toggle special characters

@@ -7,6 +7,7 @@ let g:esearch = {
     \}
 " fix: remap my file mapping. This plugin always makes it's default mappings ..
 autocmd VimEnter * nmap <leader>ff :Files<CR>
+call esearch#map('<leader>/', 'esearch')
 silent! call esearch#map('<leader>fe', 'esearch')
 silent! call esearch#map('<leader>fr', 'essubstitude')
 " Start esearch prompt autofilled with one of g:esearch.use initial patterns

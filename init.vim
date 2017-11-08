@@ -60,6 +60,7 @@ Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
 Plug 'reasonml/vim-reason-loader'
 Plug 'leafgarland/typescript-vim'
 Plug 'eugen0329/vim-esearch'
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -95,4 +96,4 @@ let g:rustfmt_command = '/Users/feiliu/.cargo/bin/rustfmt'
 let g:rustfmt_autosave = 1
 let g:rustfmt_fail_silently = 1
 
-call esearch#map('<leader>/', 'esearch')
+" set cmdheight=2
