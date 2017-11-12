@@ -23,6 +23,7 @@ nnoremap <silent> <Up> :cprevious<CR>
 nnoremap <silent> <Down> :cnext<CR>
 nnoremap <silent> <Left> :cpfile<CR>
 nnoremap <silent> <Right> :cnfile<CR>
+nnoremap <C-w>z :cclose<CR>
 
 " Save
 nnoremap <leader>w :w<CR>
@@ -44,10 +45,12 @@ nnoremap <leader>rc :so ~/.config/nvim/init.vim<CR>
 " project
 nnoremap <leader>nt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <leader>nf :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
+nnoremap <leader>nn :NERDTreeMapMenu<CR>
+
 nnoremap <C-f> :GitFiles<CR>
 nnoremap <C-g> :Ag 
 nnoremap <C-h> :History:<CR>
-nnoremap <leader>c :Commits<CR>
+nnoremap <leader>co :Commits<CR>
 nnoremap <leader>bc :BCommits<CR>
 
 " window
@@ -90,6 +93,7 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 " Terminal stuff
 :tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>T :terminal<CR>
 
 " create jumplist entry for j and k jumps with more than 1 line
 nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
@@ -122,10 +126,10 @@ tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+" nnoremap <A-h> <C-w>h
+" nnoremap <A-j> <C-w>j
+" nnoremap <A-k> <C-w>k
+" nnoremap <A-l> <C-w>l
 
 " Prettier
 nnoremap <Leader>pt :call Prettier_Toggle()<CR>
