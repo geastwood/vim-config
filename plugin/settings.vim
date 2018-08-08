@@ -17,12 +17,13 @@ scriptencoding utf-8
 set nocompatible
 filetype plugin on
 syntax on
+set encoding=utf-8
 
 " syntax enable
 " Theme
-colorscheme OceanicNext
+colorscheme deus               " gruvbox, deus, vim-material
 set laststatus=2                    " keep last status, useful for function signatures
-" set background=dark
+set background=dark
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
 set ts=4                            " number of spaces for a tab
 set sw=4                            " number of spaces for auto indent
@@ -86,3 +87,18 @@ set rtp+=/usr/local/opt/fzf
 " italic comment highlight
 highlight Comment cterm=italic gui=italic
 set clipboard=unnamedplus
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
+endif
+

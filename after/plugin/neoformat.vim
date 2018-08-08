@@ -1,30 +1,15 @@
-autocmd FileType javascript set formatprg=prettier
+autocmd FileType *.js set formatprg=prettier
+autocmd FileType *.css set formatprg=prettier
+autocmd FileType *.scss set formatprg=prettier
+autocmd FileType *.jsx set formatprg=prettier
+autocmd FileType *.json set formatprg=prettier
+autocmd FileType *.jsx.flow set formatprg=prettier
+" autocmd FileType *.dart set formatprg=dartfmt
 " autocmd FileType reason set formatprg=refmt
 
 " autocmd BufWritePre *.re Neoformat
 " let g:neoformat_try_formatprg = 1
 let g:prettier_enabled = 1
-"
-" function! SearchPrettier()
-"   let g:local_prettier = finddir('node_modules', '.;') . '/.bin/prettier'
-"   if matchstr(g:local_prettier, "^\/\\w") == ''
-"     let g:local_prettier= getcwd() . "/" . g:local_prettier
-"   endif
-"   if executable(g:local_prettier)
-"       echo g:local_prettier
-"     let configOptions = findfile('.prettier-config')
-"     if (filereadable(configOptions))
-"         echo "fei"
-"       let g:prettier_options = readfile(configOptions)
-"       autocmd FileType javascript let &formatprg=g:local_prettier . ' --stdin ' . g:prettier_options[0]
-"     else
-"         echo g:local_prettier
-"       autocmd FileType javascript let &formatprg=g:local_prettier . ' --stdin --parser flow --single-quote --trailing-comma all --semi false --tab-width 4 --print-width 120'
-"     endif
-"     let g:prettier_enabled = 1
-"   endif
-" endfunction
-"
 "
 function! g:Prettier_Toggle()
      if g:prettier_enabled
@@ -36,7 +21,12 @@ function! g:Prettier_Toggle()
     endif
 endfunction
 "
-" autocmd FileType javascript call SearchPrettier()
-autocmd BufWritePre *.js if g:prettier_enabled | Neoformat | endif
-let g:neoformat_try_formatprg=1
-let g:neoformat_only_msg_on_error=1
+autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.css Neoformat
+autocmd BufWritePre *.scss Neoformat
+autocmd BufWritePre *.jsx Neoformat
+autocmd BufWritePre *.ts Neoformat
+autocmd BufWritePre *.json Neoformat
+" autocmd BufWritePre *.dart Neoformat
+" let g:neoformat_try_formatprg=1
+" let g:neoformat_only_msg_on_error=1

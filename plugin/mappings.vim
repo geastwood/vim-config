@@ -7,12 +7,15 @@ inoremap <C-j> <esc>
 nnoremap <leader>sc :noh<cr>
 
 " misc
-" nnoremap <leader>S :Startify<CR>
+nnoremap <leader>S :Startify<CR>
 " nnoremap <leader>H :History<CR>
 " nnoremap <leader>C :Commands<CR>
 " nnoremap <leader>F :Files<CR>
 " nnoremap <leader>M :Maps<CR>
 
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> Ls :call LanguageClient_textDocument_documentSymbol()<CR>
 
 " easy-align
 nmap ga <Plug>(EasyAlign)
@@ -45,7 +48,6 @@ nnoremap <leader>rc :so ~/.config/nvim/init.vim<CR>
 " project
 nnoremap <leader>nt :NERDTreeToggle<CR>   " open a horizontal split and switch to it (,h)
 nnoremap <leader>nf :NERDTreeFind<CR>   " open a horizontal split and switch to it (,h)
-nnoremap <leader>nn :NERDTreeMapMenu<CR>
 
 nnoremap <C-f> :GitFiles<CR>
 nnoremap <C-g> :Ag 
@@ -65,6 +67,7 @@ nnoremap <Leader><Tab> :e#<CR> " switch to last buffer
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :bdelete!<CR>
 nnoremap <leader>bdd :BufOnly<CR>
+nnoremap <c-b> :Buffers<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 

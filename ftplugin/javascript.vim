@@ -1,6 +1,5 @@
 let g:javascript_plugin_flow = 1
-" enable jsx everywhere
-let g:jsx_ext_required = 0
+let g:vim_jsx_pretty_colorful_config = 1
 
 nmap <leader>td :TernDef<CR>
 nmap <leader>tb :TernDocBrowse<CR>
@@ -14,6 +13,3 @@ nmap <leader>tR :TernRename<CR>
 nmap <leader>cm :IstanbulMode<CR>
 nmap <leader>cu :IstanbulUpdate<CR>
 nmap <leader>cc :IstanbulClear<CR>
-
-" fix javascript
-nnoremap <Leader>fj :Fixmyjsconfig<CR>

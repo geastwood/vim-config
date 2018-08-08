@@ -15,6 +15,7 @@ nmap <Leader>t <Plug>(go-test)
 nmap <Leader>rt <Plug>(go-run-tab)
 nmap <Leader>rs <Plug>(go-run-split)
 nmap <Leader>rv <Plug>(go-run-vertical)
+nmap <Leader>x <Plug>(go-run-vertical)
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1

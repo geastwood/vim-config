@@ -1,4 +1,4 @@
-autocmd! BufWritePost,BufReadPost * Neomake
+" autocmd BufWritePost,BufReadPost * Neomake
 
 
 " automatically close preview window when done

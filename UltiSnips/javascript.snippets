@@ -1,143 +1,57 @@
-snippet des "describe('test', () => {})"
-describe('${1:<SomeComponent />}', function() {
-	${2}
-});
-endsnippet
-
-snippet it "it('testing', () => {})"
-it('${1:just works}', function() {
-	${2}
-});
-endsnippet
-
-snippet bef "beforeEach()"
-beforeEach(function() {
-	${1}
-});
-endsnippet
-
-snippet aft "afterEach()"
-afterEach(function() {
-	${1}
-});
-endsnippet
-
-snippet rnfc "React Native Functional Component" b
-/* @flow weak */
-
-import React from 'react';
-
-const ${1:`!v expand('%:t:r')`} = ({ ${3:...props} }) => (
-	$4
-);
-
-$1.defaultProps = {
-};
-
-$1.sampleProps = () => ({
-});
-
-$1.propTypes = {
-};
-
-export default $1;
-endsnippet
-
-
-# ES2015
-snippet "c(onst)?" "const" br
-const ${1} = ${2:'$1'};
-endsnippet
-
-snippet "l(et)?" "let" br
-let ${1} = ${2:'$1'};
-endsnippet
-
-snippet "i(mport|mp|m)?" "import" br
-import ${1} from '${2:./}${3:$1}';
-endsnippet
-
-snippet "e(xport|xp|x)?" "export" br
-export ${1:default };
-endsnippet
-
-snippet ie "Import file then export" b
-import ${1} from '${2:./}${3:$1}';
-
-export ${4:default} $1;
-endsnippet
-
-snippet r "return"
-return ${0:result;}
-endsnippet
-
-snippet : "Object Value JS"
-${1:key}: ${0:value},
-endsnippet
-
-snippet :f "method: func(...) { ... }"
-${1:key}: ${2:(args)} => {
-	return $4;
-}${3:,}
-endsnippet
-
-snippet "\.(map|filter|forEach|reduce)" "Array method with an arrow function" r
-.`!p snip.rv = match.group(1)`(${1:(c, i)} => {
-	return $2;
-});
-endsnippet
-
-snippet "\.(map|filter|forEach|reduce)=" "Array method with an arrow function inline" rA
-.`!p snip.rv = match.group(1)`(${1:(c, i)} => $2);
-endsnippet
-
-snippet => "Arrow function"
-(${1:args}) => {
-	return $3;
-}${2:;}
-endsnippet
-
-snippet =>> "Inline arrow function" A
-(${1:args}) => ($2);
-endsnippet
-
-snippet c=> "Const Function" bA
-const ${1:name} = (${2:args}) => {
-	return $4;
-}${3:;}
-endsnippet
-
-snippet expf "Export function" b
-export ${1:default }function($2) {
-	$3
-};
-endsnippet
-
-snippet fun* "Generator"
-function* ${1:name}($2) {
-	yield $3;
-}
-endsnippet
-
-snippet forof "For of loop" b
-for (let ${1:value} of ${2:iterable}) {
-	${3:$1}
-}
-endsnippet
-
-snippet class "Class"
-class ${1:Name} {
-	constructor(${2:arg}) {
-		$3
-	}
-	$4
-}
-endsnippet
-
-snippet cl "console.log(...)"
-console.log('${2:$1: }', ${1});
-endsnippet
-
 snippet expt "expect(foo).to...(bar)"
 expect(${2}).to${1}(${3});
 endsnippet
+
+snippet cll "console.log(...)"
+console.log('${2:$1: }', ${1});
+endsnippet
+
+snippet cl "console.log(...)"
+console.log(${1});
+endsnippet
+
+snippet me "module.exports"
+module.exports = ${1}
+endsnippet
+
+snippet req "node require"
+const ${1} = require('${2}')
+endsnippet
+
+snippet ec "export const"
+export const ${1} = ${2}
+endsnippet
+
+snippet jest_des "jest describe"
+describe('${1}', () => {
+  it('${2}', () => {
+    expect(true).toBe(true)
+  })
+})
+endsnippet
+
+snippet t_reducer "reducer template"
+/* @flow */
+
+import * as storeActions from '${1}'
+
+const defaultState = {}
+
+export type State = {}
+
+export default (state: State = defaultState, action: Action) => {
+  switch (action.type) {
+    case '${2}':
+      return state
+    default:
+      return state
+  }
+}
+endsnippet
+
+snippet while_t "while(true)"
+while (true) {
+  ${1}
+}
+endsnippet
+  

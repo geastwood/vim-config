@@ -27,7 +27,8 @@ function! g:UltiSnips_Reverse()
 endfunction
 
 let g:UltiSnipsSnippetsDir="~/.config/nvim/UltiSnips"
-
+" let g:UltiSnipsJumpForwardTrigger="<C-J>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-M>"
 
 function! LoadUltiSnips()
   call plug#load('ultisnips')

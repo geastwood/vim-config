@@ -1,12 +1,12 @@
 " Load Plugins with vim-plug
 call plug#begin('~/.dotfiles/vim/plugged')
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/vim-slash' " improve search
+" Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-fnr' " find and replace preview
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo' " Register manager
 
 " Tmux statusline generator
@@ -15,8 +15,10 @@ Plug 'junegunn/vim-peekaboo' " Register manager
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mhartington/oceanic-next'
-Plug 'flazz/vim-colorschemes'
+" Plug 'mhartington/oceanic-next'
+Plug 'ajmwagar/vim-deus'
+Plug 'hzchirs/vim-material'
+" Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
@@ -32,18 +34,18 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 
 Plug 'tommcdo/vim-exchange'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx.flow'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx.flow'] }
+Plug 'pangloss/vim-javascript' 
+Plug 'maxmellon/vim-jsx-pretty'
+
+"
 Plug 'alvan/vim-closetag'
-Plug 'benekastah/neomake'
+" Plug 'benekastah/neomake'
 Plug 'SirVer/ultisnips', { 'on': [] }
 Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx.flow'], 'do': 'npm install -g tern' }
 Plug 'steelsojka/deoplete-flow', { 'for': ['javascript', 'javascript.jsx.flow'] }
-Plug 'wwwdata/vim-flow', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'on': ['TernDef', 'TernDoc', 'TernDocBrowse', 'TernType', 'TernDefPreview', 'TernDefSplit', 'TernDefTab', 'TernRefs', 'TernRename'] }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -55,13 +57,20 @@ Plug 'ryanoasis/vim-webdevicons'
 Plug 'retorillo/istanbul.vim', { 'on': ['IstanbulClear', 'IstanbulUpdate', 'IstanbulMode'] }
 Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
 Plug 'reasonml/vim-reason-loader'
-Plug 'leafgarland/typescript-vim'
 Plug 'eugen0329/vim-esearch'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'natebosch/vim-lsc'
 Plug 'Shougo/echodoc.vim'
 Plug 'junegunn/vim-peekaboo' " Register manager
 Plug 'itchyny/vim-cursorword'
-Plug 'MattesGroeger/vim-bookmarks'
+Plug 'w0rp/ale'
+Plug 'morhetz/gruvbox'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'romainl/vim-qf'
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -70,21 +79,48 @@ Plug 'racer-rust/vim-racer'
 " Haskell
 Plug 'itchyny/vim-haskell-indent'
 
-call plug#end()
+Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/echodoc.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
+" Python
+Plug 'nvie/vim-flake8', { 'do': 'pip3 install flake8' }
+Plug 'tell-k/vim-autopep8', { 'do': 'pip3 install autopep8' }
+Plug 'davidhalter/jedi-vim'
+
+" Solidity
+Plug 'tomlion/vim-solidity'
+Plug 'sohkai/syntastic-local-solhint.vim'
+
+Plug 'dart-lang/dart-vim-plugin'
+
+" Swift
+Plug 'bumaociyuan/vim-swift'
+
+call plug#end()
 
 let mapleader = ','
 let maplocalleader = ','
 
+
+let g:neosnippet#enable_completed_snippet = 1
+let g:autocomplete_flow#insert_paren_after_function = 0
 let g:user_emmet_leader_key='<C-e>'
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 let g:mta_filetypes = {
-            \ 'html': 1,
-            \ 'xhtml': 1,
-            \ 'phtml': 1,
-            \ 'javascript.jsx': 1,
-            \ 'javascript.jsx.flow': 1,
-            \}
+                        \ 'html': 1,
+                        \ 'xhtml': 1,
+                        \ 'phtml': 1,
+                        \ 'javascript.jsx': 1,
+                        \ 'javascript.jsx.flow': 1,
+                        \}
+let g:user_emmet_settings = {
+                        \  'javascript.jsx.flow' : {
+                        \      'extends' : 'jsx',
+                        \  },
+                        \}
+
 let g:mta_use_matchparen_group = 0
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 
@@ -96,6 +132,25 @@ let g:racer_experimental_completer = 1
 let g:rustfmt_command = '/Users/feiliu/.cargo/bin/rustfmt'
 let g:rustfmt_autosave = 1
 let g:rustfmt_fail_silently = 1
+
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': '<C-]>',
+    \ 'FindReferences': 'gr',
+    \ 'NextReference': '<C-n>',
+    \ 'PreviousReference': '<C-p>',
+    \ 'FindImplementations': 'gI',
+    \ 'FindCodeActions': 'ga',
+    \ 'DocumentSymbol': 'go',
+    \ 'WorkspaceSymbol': 'gS',
+    \ 'ShowHover': 'K',
+    \ 'Completion': 'completefunc',
+    \}
+
+let g:fzf_action = {
+\ 'ctrl-u': 'tab split',
+\ 'ctrl-x': 'split',
+\ 'ctrl-v': 'vsplit' }
 
 " rafi-2017 - hybrid custom
 " =========================
