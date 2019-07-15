@@ -24,30 +24,3 @@ augroup my_neomake_signs
     hi link NeomakeWarning NeomakeMessage
 augroup END
 
-function! SearchFlowBin()
-  let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
-  if matchstr(local_flow, "^\/\\w") == ''
-      let local_flow= getcwd() . "/" . local_flow
-  endif
-  if executable(local_flow)
-    let g:flow#flowpath = local_flow
-    let g:deoplete#sources#flow#flow_bin = local_flow
-    let g:neomake_flow_flow_exe = local_flow
-  endif
-endfunction
-
-autocmd FileType javascript.jsx.flow call SearchFlowBin()
-
-function! SearchEslintBin()
-  let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
-  if matchstr(local_eslint, "^\/\\w") == ''
-    let local_eslint= getcwd() . "/" . local_eslint
-  endif
-  if executable(local_eslint)
-    let g:neomake_javascript_eslint_exe = local_eslint
-  endif
-endfunction
-
-autocmd FileType javascript call SearchEslintBin()
-autocmd FileType javascript.jsx call SearchEslintBin()
-autocmd FileType javascript.jsx.flow call SearchEslintBin()

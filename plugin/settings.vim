@@ -21,7 +21,7 @@ set encoding=utf-8
 
 " syntax enable
 " Theme
-colorscheme deus               " gruvbox, deus, vim-material
+colorscheme gruvbox               " gruvbox, deus, vim-material
 set laststatus=2                    " keep last status, useful for function signatures
 set background=dark
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
@@ -86,7 +86,7 @@ set rtp+=/usr/local/opt/fzf
 
 " italic comment highlight
 highlight Comment cterm=italic gui=italic
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set number relativenumber
 
 augroup numbertoggle

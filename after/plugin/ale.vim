@@ -5,3 +5,16 @@ let g:ale_completion_enabled = 1
 " some other plugin which sets quickfix errors, etc.
 " let g:ale_keep_list_window_open = 0
 let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+
+
+let g:ale_linters ={
+                  \   'csh': ['shell'],
+                  \   'go': ['gometalinter', 'golint'],
+                  \   'javascript': ['eslint', 'flow'],
+                  \   'python': ['flake8', 'mypy', 'pylint'],
+                  \   'rust': ['cargo'],
+                  \   'spec': [],
+                  \   'text': [],
+                  \   'zsh': ['shell']
+                  \}

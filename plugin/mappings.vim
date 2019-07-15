@@ -35,9 +35,9 @@ inoremap <C-s> <esc>:w<CR>
 nnoremap <C-s> :w<CR>
 
 " Quit
-inoremap <C-Q> <esc>:q<cr>
-nnoremap <C-Q> :q<cr>
-vnoremap <C-Q> <esc>:q<cr>
+inoremap <C-q> <esc>:q<cr>
+nnoremap <C-q> :q<cr>
+vnoremap <C-q> <esc>:q<cr>
 nnoremap <Leader>q :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 
