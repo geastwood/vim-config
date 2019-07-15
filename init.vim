@@ -24,6 +24,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 
+" JavaScript
+Plug 'sheerun/vim-polyglot'
+
 
 "
 Plug 'alvan/vim-closetag'
