@@ -1,0 +1,13 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "Markdown",
+    "ts",
+    "js",
+    "tsx",
+    "jsx",
+    "java"
+  ],
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true
+}

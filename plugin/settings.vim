@@ -21,7 +21,8 @@ set encoding=utf-8
 
 " syntax enable
 " Theme
-colorscheme gruvbox               " gruvbox, deus, vim-material
+colorscheme vim-material
+" colorscheme gruvbox               " gruvbox, deus, vim-material
 set laststatus=2                    " keep last status, useful for function signatures
 set background=dark
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that

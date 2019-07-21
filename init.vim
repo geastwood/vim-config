@@ -1,12 +1,11 @@
 " Load Plugins with vim-plug
 call plug#begin('~/.dotfiles/vim/plugged')
-" Plug 'junegunn/seoul256.vim'
+
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-fnr' " find and replace preview
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/goyo.vim'
+
 Plug 'junegunn/vim-peekaboo' " Register manager
 
 " Tmux statusline generator
@@ -27,6 +26,12 @@ Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 " JavaScript
 Plug 'sheerun/vim-polyglot'
 
+" code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'hzchirs/vim-material'
+
+Plug 'vim-syntastic/syntastic'
 
 "
 Plug 'alvan/vim-closetag'
@@ -36,12 +41,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-rooter' " change current directory to root
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
-Plug 'eugen0329/vim-esearch'
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+
+
 Plug 'natebosch/vim-lsc'
-Plug 'junegunn/vim-peekaboo' " Register manager
 Plug 'itchyny/vim-cursorword'
-Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -62,14 +65,7 @@ let g:user_emmet_leader_key='<C-e>'
 let g:mta_filetypes = {
                         \ 'html': 1,
                         \ 'xhtml': 1,
-                        \ 'phtml': 1,
-                        \ 'javascript.jsx': 1,
-                        \ 'javascript.jsx.flow': 1,
-                        \}
-let g:user_emmet_settings = {
-                        \  'javascript.jsx.flow' : {
-                        \      'extends' : 'jsx',
-                        \  },
+                        \ 'phtml': 1
                         \}
 
 let g:mta_use_matchparen_group = 0
@@ -84,21 +80,16 @@ let g:rustfmt_command = '/Users/feiliu/.cargo/bin/rustfmt'
 let g:rustfmt_autosave = 1
 let g:rustfmt_fail_silently = 1
 
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': '<C-]>',
-    \ 'FindReferences': 'gr',
-    \ 'NextReference': '<C-n>',
-    \ 'PreviousReference': '<C-p>',
-    \ 'FindImplementations': 'gI',
-    \ 'FindCodeActions': 'ga',
-    \ 'DocumentSymbol': 'go',
-    \ 'WorkspaceSymbol': 'gS',
-    \ 'ShowHover': 'K',
-    \ 'Completion': 'completefunc',
-    \}
-
 let g:fzf_action = {
 \ 'ctrl-u': 'tab split',
 \ 'ctrl-x': 'split',
 \ 'ctrl-v': 'vsplit' }
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
