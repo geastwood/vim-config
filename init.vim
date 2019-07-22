@@ -7,7 +7,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'junegunn/vim-peekaboo' " Register manager
 
-Plug 'gabrielelana/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
