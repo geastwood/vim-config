@@ -9,5 +9,6 @@
     "java"
   ],
   "java.format.enabled": true,
-  "java.format.onType.enabled": true
+  "java.format.onType.enabled": true,
+  "java.signatureHelp.enabled": true
 }

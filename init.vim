@@ -1,15 +1,11 @@
 " Load Plugins with vim-plug
 call plug#begin('~/.dotfiles/vim/plugged')
 
-Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-fnr' " find and replace preview
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'junegunn/vim-peekaboo' " Register manager
-
-" Tmux statusline generator
-" Plug 'edkolev/tmuxline.vim'
 
 Plug 'gabrielelana/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
@@ -19,34 +15,31 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 
 " JavaScript
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " language pack
 
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'hzchirs/vim-material'
-
-Plug 'vim-syntastic/syntastic'
-
-"
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-rooter' " change current directory to root
 Plug 'ryanoasis/vim-webdevicons'
-Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
+" Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
 
-
-Plug 'natebosch/vim-lsc'
 Plug 'itchyny/vim-cursorword'
 Plug 'morhetz/gruvbox'
 Plug 'terryma/vim-multiple-cursors'
+
+" theme
+Plug 'hzchirs/vim-material'
+Plug 'morhetz/gruvbox'
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -57,6 +50,7 @@ call plug#end()
 let mapleader = ','
 let maplocalleader = ','
 
+" Auto pairs
 let g:AutoPairsShortcutFastWrap = '<C-d>'
 
 " let g:comfortable_motion_no_default_key_mappings = 1
@@ -86,10 +80,10 @@ let g:fzf_action = {
 \ 'ctrl-v': 'vsplit' }
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
