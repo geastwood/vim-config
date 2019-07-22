@@ -10,5 +10,6 @@
   ],
   "java.format.enabled": true,
   "java.format.onType.enabled": true,
-  "java.signatureHelp.enabled": true
+  "java.signatureHelp.enabled": true,
+  "java.errors.incompleteClasspath.severity": "ignore"
 }
