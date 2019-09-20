@@ -15,15 +15,19 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
-" Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 
 " JavaScript
 Plug 'sheerun/vim-polyglot' " language pack
 
+Plug 'fatih/vim-go'
+
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'sgur/vim-editorconfig'
 
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/splitjoin.vim'
@@ -45,7 +49,18 @@ Plug 'morhetz/gruvbox'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 call plug#end()
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 let mapleader = ','
 let maplocalleader = ','
@@ -61,6 +76,14 @@ let g:mta_filetypes = {
                         \ 'xhtml': 1,
                         \ 'phtml': 1
                         \}
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 let g:mta_use_matchparen_group = 0
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
