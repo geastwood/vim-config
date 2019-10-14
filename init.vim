@@ -19,10 +19,17 @@ Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
 
+Plug 'vim-airline/vim-airline'
+
 " JavaScript
 Plug 'sheerun/vim-polyglot' " language pack
 
+" Go
 Plug 'fatih/vim-go'
+
+" vim wiki
+Plug 'vimwiki/vimwiki'
+Plug 'itchyny/calendar.vim'
 
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -44,6 +51,7 @@ Plug 'terryma/vim-multiple-cursors'
 " theme
 Plug 'hzchirs/vim-material'
 Plug 'morhetz/gruvbox'
+Plug 'mhartington/oceanic-next'
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -70,7 +78,6 @@ let g:AutoPairsShortcutFastWrap = '<C-d>'
 
 " let g:comfortable_motion_no_default_key_mappings = 1
 let g:neosnippet#enable_completed_snippet = 1
-let g:user_emmet_leader_key='<C-e>'
 let g:mta_filetypes = {
                         \ 'html': 1,
                         \ 'xhtml': 1,
@@ -110,3 +117,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:vimwiki_use_calendar = 1

@@ -25,7 +25,7 @@ snippet stringify "log json" b
 endsnippet
 
 snippet ed "export default" b 
-	export default ${0}
+export default ${0}
 endsnippet
 
 snippet con "const" b
@@ -35,6 +35,12 @@ endsnippet
 snippet fun "arrow function" i
 (${0}) => {
 	${1}
+}
+endsnippet
+
+snippet func "function decleration" i
+function ${1}(${2}) {
+	${3}
 }
 endsnippet
 
@@ -71,3 +77,6 @@ endsnippet
 
 
 # CLASS section end
+snippet impr "import react" i
+import * as React from 'react'
+endsnippet

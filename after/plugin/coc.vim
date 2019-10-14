@@ -28,7 +28,7 @@ set updatetime=300
 " set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+set signcolumn=auto:4
 
 nmap <leader>rn <Plug>(coc-rename)
 

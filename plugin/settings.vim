@@ -21,12 +21,15 @@ set encoding=utf-8
 
 " syntax enable
 " Theme
-colorscheme vim-material
+" colorscheme vim-material
+" colorscheme OceanicNextLight
+colorscheme OceanicNext
+" colorscheme gruvbox
 set shortmess+=c
 set nofixendofline
 
 set laststatus=2                    " keep last status, useful for function signatures
-set background=dark
+" set background=dark
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
 set ts=4                            " number of spaces for a tab
 set sw=4                            " number of spaces for auto indent
@@ -74,14 +77,24 @@ language en_US
 set langmenu=en
 set wrap                          " no wrap
 
-if has("gui_vimr")
-  set termguicolors                 " use gui background/foreground
+" if has("gui_vimr")
+set termguicolors                 " use gui background/foreground
+" endif
+
+
+if exists('$TMUX')
+  let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
 endif
 
+
+
+
+
 " Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
+" if (has("termguicolors"))
+"  set termguicolors
+" endif
 
 set noswapfile
 set rtp+=/usr/local/opt/fzf
