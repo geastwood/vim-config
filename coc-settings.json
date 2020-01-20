@@ -10,13 +10,22 @@
     "tsx",
     "jsx",
     "java",
-    "go"
+    "go",
+    "py",
+    "graphql",
+    "python"
   ],
   "java.format.enabled": true,
   "java.format.onType.enabled": true,
   "java.signatureHelp.enabled": true,
   "java.errors.incompleteClasspath.severity": "ignore",
   "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],

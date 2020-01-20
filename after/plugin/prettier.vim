@@ -2,4 +2,4 @@
 autocmd BufWritePre *.tsx Prettier
 " autocmd BufWritePre *.js Prettier
 autocmd BufWritePre *.jsx Prettier
-" autocmd BufWritePre *.json Prettier
+autocmd BufWritePre *.json Prettier

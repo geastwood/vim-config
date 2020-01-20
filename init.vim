@@ -18,6 +18,12 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-sleuth' " fix shiftwidth and expandtab
+Plug 'tpope/vim-projectionist'
+" bash
+Plug 'vim-scripts/bash-support.vim'
+
+" Grpahql
+Plug 'jparise/vim-graphql'
 
 Plug 'vim-airline/vim-airline'
 
@@ -118,3 +124,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:vimwiki_use_calendar = 1
+
+au BufRead,BufNewFile .evtrc setfiletype zsh
+au BufRead,BufNewFile alias setfiletype zsh
+
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif

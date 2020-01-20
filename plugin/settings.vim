@@ -21,15 +21,15 @@ set encoding=utf-8
 
 " syntax enable
 " Theme
-" colorscheme vim-material
+colorscheme vim-material
 " colorscheme OceanicNextLight
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme gruvbox
 set shortmess+=c
 set nofixendofline
 
-set laststatus=2                    " keep last status, useful for function signatures
-" set background=dark
+set laststatus=1                    " keep last status, useful for function signatures
+set background=dark
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
 set ts=4                            " number of spaces for a tab
 set sw=4                            " number of spaces for auto indent
@@ -64,7 +64,7 @@ set inccommand=split                " nice preview of search and replace actions
 
 set showmatch                       " show matching brackets
 set hlsearch                        " highlight all search matches
-set textwidth=79                    " max width
+set textwidth=120                    " max width
 set formatoptions+=j                " remove comment characters when joining lines
 set formatoptions+=n                " indent numbered lists
 set colorcolumn=120                 " display a column after 120
@@ -76,6 +76,8 @@ set updatetime=1000                 " when to execute CursorHold
 language en_US
 set langmenu=en
 set wrap                          " no wrap
+set clipboard=unnamedplus
+set selection=old
 
 " if has("gui_vimr")
 set termguicolors                 " use gui background/foreground
@@ -101,7 +103,6 @@ set rtp+=/usr/local/opt/fzf
 
 " italic comment highlight
 highlight Comment cterm=italic gui=italic
-set clipboard+=unnamedplus
 set number relativenumber
 
 augroup numbertoggle

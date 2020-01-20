@@ -11,9 +11,8 @@ let g:startify_list_order = [
             \]
 let g:startify_bookmarks = [
             \ {'v': '~/.config/nvim/init.vim'},
-            \ {'g': '~/Projects/guestlist-app'},
-            \ {'a': '~/Projects/InterNationsApp'},
-            \ {'i': '~/Projects/in'},
+            \ {'e': '~/Projects/everitoken'},
+            \ {'f': '~/Projects/f11'},
             \]
 
 let g:startify_change_to_vcs_root = 1
