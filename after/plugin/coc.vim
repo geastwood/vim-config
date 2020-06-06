@@ -81,3 +81,12 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+
+" Example configuration
+nmap <Leader>mj <Plug>(coc-bookmark-next)
+nmap <Leader>mk <Plug>(coc-bookmark-prev)
+nmap <Leader>mt <Plug>(coc-bookmark-toggle)
+nmap <Leader>ma <Plug>(coc-bookmark-annotate)
+nmap <Leader>ml  :<C-u>CocList bookmark<cr>
+
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>

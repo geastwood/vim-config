@@ -48,7 +48,6 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-rooter' " change current directory to root
 Plug 'ryanoasis/vim-webdevicons'
-" Plug 'sbdchd/neoformat', { 'do': 'npm install -g prettier' }
 
 Plug 'itchyny/vim-cursorword'
 Plug 'morhetz/gruvbox'

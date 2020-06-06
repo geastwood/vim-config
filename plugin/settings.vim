@@ -21,9 +21,9 @@ set encoding=utf-8
 
 " syntax enable
 " Theme
-colorscheme vim-material
+" colorscheme vim-material
 " colorscheme OceanicNextLight
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme gruvbox
 set shortmess+=c
 set nofixendofline
